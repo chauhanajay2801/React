@@ -1,0 +1,25 @@
+Q1. What is Emmet?
+Ans. Emmet takes the concept of snippets to a whole new level. You can enter a CSS-like expression that can be dynamically parsed and send output that depends on the input in the abbreviation. Emmet's workflow is based on HTML / XML and CSS but is designed and optimized for web builders that can also be used in programming languages.Emmet allows you to write lightning-fast code. Simple CSS-like acronyms are turned into complex code. Easily generate lorem ipsum text, use many keyboard shortcuts, and more.
+
+Q2. Difference between library and Framework?
+Ans. Framework provides reday to use tools ,standards and tempelate for fast application Development. It controls calling of library from our code.It makes app development and deployement easy and reduce the complexity of software development process.
+Library:provides reusable function to our code and our code controls when and where to call library and helps to reuse a software function
+
+Q3. What id cdn and why do we use it?
+Ans. A content delivery network (CDN) is a network of interconnected servers that speeds up webpage loading for data-heavy applications. CDN can stand for content delivery network or content distribution network. 
+We use it because CDN improves efficiency by introducing intermediary servers between the client and the website server. These CDN servers manage some of the client-server communications. They decrease web traffic to the web server, reduce bandwidth consumption, and improve the user experience of your applications.
+
+Q4. Why is React known as React?
+Ans.
+
+Q5. What is cross-origin in the script tag?
+Ans
+
+Q6. What is the Difference between React and ReactDOM?
+Ans.
+
+Q7. What is the difference between react development.js and react production.js in CDN?
+Ans.
+
+Q8. What are async and Defer?
+Ans.
