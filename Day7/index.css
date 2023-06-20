@@ -76,3 +76,8 @@ cursor: pointer;
 .filter {
   display: flex;
 }
+
+.rest-logo {
+  height: 20px;
+  width: 50px;
+}

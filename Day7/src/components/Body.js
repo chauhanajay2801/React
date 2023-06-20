@@ -28,7 +28,7 @@ const Body = () =>{
       <div className="body">
        <div className="filter">
        <div className="search">
-        <input type="text" classNamename="search-box" value={searchText} 
+        <input type="text" className="search-box" value={searchText} 
         onChange={(e)=>{setsearchText(e.target.value)}}/>
         <button onClick={()=>{
           const filteredRestaurant = listOfRestaurants.filter
