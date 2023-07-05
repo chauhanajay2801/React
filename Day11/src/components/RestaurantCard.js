@@ -2,6 +2,7 @@ import { CDN_URL } from "../utils/constants";
 
 const RestaurantCard = (props) => {
   const { resData } = props;
+  const { user } = props;
 
   const {
     cloudinaryImageId,
@@ -11,6 +12,8 @@ const RestaurantCard = (props) => {
     costForTwo,
     deliveryTime,
   } = resData?.data;
+
+
 
   
   return (
@@ -26,6 +29,7 @@ const RestaurantCard = (props) => {
       <h4 className="py-1">{avgRating} stars</h4>
       <h4 className="py-1">₹{costForTwo / 100} FOR TWO</h4>
       <h4 className="py-2">{deliveryTime} minutes</h4>
+      <h4 className="py-2">{user.name} </h4>
       <button className="py-2 px-5 bg-slate-700 rounded-lg text-white"
       >
       Order
