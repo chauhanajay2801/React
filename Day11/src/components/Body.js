@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 
-const Body = ({user}) => {
+const Body = () => {
   const [listOfRestaurants, setlistOfRestaurants] = useState([]);
   const [searchText, setsearchText] = useState("");
   const [filteredRestaurant, setfilteredRestaurant] = useState([]);
@@ -79,7 +79,7 @@ const Body = ({user}) => {
             key={restaurant.data.id}
             to={"/restaurants/" + restaurant.data.id}
           >
-            <RestaurantCard resData={restaurant} user={user} />
+            <RestaurantCard resData={restaurant} />
           </Link>
         ))}
       </div>

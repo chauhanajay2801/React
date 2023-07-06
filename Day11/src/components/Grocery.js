@@ -30,11 +30,7 @@ const Section = ({ title, description, isVisible, setisVisible }) => {
 };
 
 const Grocery = () => {
-  const [sectionConfig, setsectionConfig] = useState({
-    showAbout: true,
-    showTeam: true,
-    showCareers: true,
-  });
+ const [visibleSection, setvisibleSection] = useState("about")
 
   return (
     <>
@@ -43,25 +39,17 @@ const Grocery = () => {
       <Section
         title={"About Instamart"}
         description={"This is about the first section  of instamart"}
-        isVisible={sectionConfig.showAbout}
+        isVisible={visibleSection == "about"}
         setisVisible={() =>
-          setsectionConfig({
-            showAbout: true,
-            showTeam: false,
-            showCareers: false,
-          })
+          setvisibleSection("about")
         }
       />
       <Section
         title={"Team Instamart"}
         description={"We are hardworking 20 people team of instamart"}
-        isVisible={sectionConfig.showTeam}
+        isVisible={visibleSection == "team"}
         setisVisible={() =>
-          setsectionConfig({
-            showAbout: false,
-            showTeam: true,
-            showCareers: false,
-          })
+          setvisibleSection("team")
         }
       />
       <Section
@@ -69,13 +57,9 @@ const Grocery = () => {
         description={
           "Come join us to get the best in class worklife and excellent perks"
         }
-        isVisible={sectionConfig.showCareers}
+        isVisible={visibleSection == "carrer"}
         setisVisible={() =>
-          setsectionConfig({
-            showAbout: false,
-            showTeam: false,
-            showCareers: true,
-          })
+          setvisibleSection("carrer")
         }
       />
     </>

@@ -1,22 +1,37 @@
-import React, { lazy, Suspense, useState } from "react";
+import React, { lazy, Suspense, useState, useContext } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Body from "./components/Body";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error"
 import { createBrowserRouter, RouterProvider,Outlet} from "react-router-dom";
 import RestaurantMenu from "./components/RestaurantMenu";
+import Cart from "./components/Cart";
+import UserContext from "./utils/UserContext";
+
 
 
 const Grocery = lazy(()=>import("./components/Grocery"));
 
 const AppLayout = () => {
+  const [user, setuser] = useState({
+    name:"Ajay Chauhan",
+    email:"Chauhanajay2801@gmail.com"
+  });
+
+
+
   return(
-    <div className="App">
+    <>
+
+    <UserContext.Provider value={{user:user,setuser:setuser}}>
      <Header/>
      <Outlet/>
-    </div>
+     <Footer/>
+    </UserContext.Provider>
+    </>
   )
 }
 
@@ -27,10 +42,7 @@ const appRouter = createBrowserRouter([
     children:[
       {
         path:'/',
-        element:<Body user={{ 
-          name:"Ram",
-          email:"chauhanajay2801@gmail.com"
-        }}/>
+        element:<Body/>
       },
       {
         path:'/about',
@@ -39,6 +51,10 @@ const appRouter = createBrowserRouter([
       {
         path:"/contact", 
         element:<Contact/>
+      },  
+      {
+        path:"/cart", 
+        element:<Cart/>
       },
       {
         path:"/grocery", 
