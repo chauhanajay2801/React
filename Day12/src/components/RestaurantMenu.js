@@ -27,13 +27,13 @@ const RestaurantMenu = () => {
   return (
     <div>
       <h1>{name}</h1>
-      <h3>{cuisines.join(", ")}</h3>
+      <h3>{cuisines?.join(", ")}</h3>
       <h3>{costForTwoMessage}</h3>
       <ul className="p-5">
         {itemCards.map((item) => (
-          <li key={item.card.info.id}>
-            {item.card.info.name}-
-            {item.card.info.price / 100 || item.card.info.defaultPrice / 100} - 
+          <li key={item?.card?.info?.id}>
+            {item?.card?.info?.name}-
+            {item?.card?.info?.price / 100 || item?.card?.info?.defaultPrice / 100} - 
             <button className="px-3 py-1 rounded-lg bg-pink-400"
             onClick={() => addFoodItem(item)}
             >Add</button>
